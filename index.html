@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Затишье Био</title>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Новый анимированный фон */
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(-45deg, #1E3C72, #2A5298, #000);
+      background-size: 300% 300%;
+      animation: gradientAnimation 10s infinite alternate;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    /* Частицы */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Контейнер для меню и фото */
+    .content {
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Меню */
+    .menu-background {
+      width: 280px;
+      height: 350px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 30px;
+    }
+
+    .buttons-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .button {
+      padding: 12px 25px;
+      background-color: #0000FF;
+      color: #FFFFFF;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background-color: #1E3C72;
+    }
+
+    /* Фото */
+    .profile-photo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="background"></div>
+  <div id="particles-js"></div>
+
+  <div class="content">
+    <!-- Меню -->
+    <div class="menu-background">
+      <div class="buttons-container">
+        <a href="https://t.me/dio_pisdec" class="button">Био: @dio_pisdec</a>
+        <a href="https://t.me/Tishe_axax" class="button">Тгк: @Tishe_axax</a>
+        <a href="https://t.me/Tishe_please" class="button">Лс: @Tishe_please</a>
+      </div>
+    </div>
+
+    <!-- Фото справа -->
+    <img src="images/photo_2025-02-06_21-33-54.jpg" alt="Фото" class="profile-photo">
+  </div>
+
+  <script>
+    /* Настройки частиц */
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 80 },
+        "color": { "value": "#FFFFFF" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.6, "anim": { "enable": true, "speed": 1 } },
+        "size": { "value": 4, "random": true, "anim": { "enable": true, "speed": 10 } },
+        "line_linked": { "enable": true, "distance": 150, "color": "#0000FF", "opacity": 0.4 },
+        "move": { "enable": true, "speed": 2 }
+      }
+    });
+  </script>
+
+</body>
+</html>
